@@ -3,6 +3,24 @@ Open this folder in Visual Studio Code and use Live Server on index.html, or ser
 folder with any static HTTP server. No build step, package installation, backend, or database
 is required. The Google Fonts link is optional; the application remains usable offline.
 
+VERCEL DEPLOYMENT
+This is a static HTML, CSS, and JavaScript app. The included vercel.json serves the project
+root directly; there is no build step, package installation, environment variable, or backend.
+
+Deploy from GitHub:
+1. Push the project to a GitHub repository.
+2. Sign in at https://vercel.com and choose Add New > Project.
+3. Import the GitHub repository and approve access if prompted.
+4. In project settings, select Other as the framework, keep the root directory as `./`, leave
+   the build and install commands empty, and set the output directory to `.`.
+5. Choose Deploy. Vercel will provide a production URL when the deployment finishes.
+6. To use a custom domain, open the project's Settings > Domains and follow the instructions.
+
+With the Git integration enabled, pushes to the production branch trigger a production
+deployment, and pull requests get preview deployments. No Vercel environment variables are
+needed. Browser LocalStorage is scoped to the deployed domain, so local demo records do not
+automatically transfer to the Vercel URL.
+
 APPLICATION
 - index.html: application shell, workspace navigation and shared search.
 - styles.css: responsive enterprise interface, dark/light themes and print styles.
