@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d16">
+  <meta name="description" content="Sign in to the TrustLens demo workspace.">
+  <title>Sign In — TrustLens</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="registration-page">
+  <button class="icon-button theme-toggle registration-theme-toggle" id="themeToggle" type="button" aria-label="Toggle light mode" aria-pressed="false" title="Toggle light mode"><span class="theme-icon" aria-hidden="true">☀</span></button>
+  <main class="registration-shell auth-shell">
+    <a class="brand registration-brand" href="index.html" aria-label="TrustLens dashboard">
+      <span class="brand-mark">T</span>
+      <span class="brand-copy">TRUST<span>LENS</span><small>INTELLIGENCE PLATFORM</small></span>
+    </a>
+    <section class="registration-card" aria-labelledby="signinTitle">
+      <div class="eyebrow">ACCOUNT ACCESS / SIGN IN</div>
+      <h1 id="signinTitle">Welcome back</h1>
+      <p class="registration-intro">Enter your email and password to continue.</p>
+      <form id="signinForm" class="auth-form" novalidate>
+        <div class="registration-field">
+          <label for="signinEmail">Email address</label>
+          <input id="signinEmail" name="email" type="email" autocomplete="username" placeholder="you@example.com" required>
+        </div>
+        <div class="registration-field">
+          <label for="signinPassword">Password</label>
+          <div class="password-input-wrap">
+            <input id="signinPassword" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required aria-describedby="signinError">
+            <button class="password-toggle" id="passwordToggle" type="button" aria-label="Show password" aria-pressed="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </button>
+          </div>
+        </div>
+        <div class="auth-alert" id="signinError" role="alert" hidden></div>
+        <button class="primary-button registration-submit" type="submit">Sign in <span>→</span></button>
+        <p class="registration-status" id="signinStatus" role="status" aria-live="polite"></p>
+      </form>
+      <p class="registration-privacy">This demo checks credential format only. Authentication is not connected; credentials are not sent or stored.</p>
+      <p class="auth-account-links">New to TrustLens? <a href="signup.html">Create an account</a> · <a href="register.html">Registration form</a></p>
+      <a class="registration-back" href="index.html">← Back to TrustLens</a>
+    </section>
+  </main>
+  <script src="auth-pages.js"></script>
+  <script src="theme.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>

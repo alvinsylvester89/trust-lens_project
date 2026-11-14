@@ -27,6 +27,10 @@
         <button class="nav-item" data-view="score"><span class="nav-icon">◉</span>Trust score<span class="nav-hint">05</span></button>
         <div class="nav-caption nav-divider">OPERATIONS</div>
         <button class="nav-item" data-view="reports"><span class="nav-icon">▤</span>Investigations & reports</button>
+        <a class="nav-item" href="register.html"><span class="nav-icon">＋</span>Registration</a>
+        <a class="nav-item" href="signup.html"><span class="nav-icon">＋</span>Sign up</a>
+        <a class="nav-item" href="signin.html"><span class="nav-icon">↪</span>Sign in</a>
+        <a class="nav-item" href="calculator.html"><span class="nav-icon">⊞</span>Calculator</a>
         <button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span>Settings</button>
       </nav>
       <div class="sidebar-bottom">
@@ -41,6 +45,7 @@
         <div class="top-actions">
           <label class="global-search"><span>⌕</span><input id="globalSearch" type="search" placeholder="Search investigations..." aria-label="Search investigations"><kbd>⌘ K</kbd></label>
           <span class="env-badge"><i></i> SIMULATED</span>
+          <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="Toggle light mode" aria-pressed="false" title="Toggle light mode"><span class="theme-icon" aria-hidden="true">☀</span></button>
           <button class="icon-button notification-button" id="notificationsBtn" aria-label="Notifications">♧<i></i></button>
           <button class="profile-avatar top-profile" data-view="settings" aria-label="Open settings">TL</button>
         </div>
@@ -51,5 +56,7 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <input type="file" id="filePicker" hidden multiple>
   <script src="app.js"></script>
+  <script src="theme.js"></script>
+  <script src="chatbot.js"></script>
 </body>
 </html>

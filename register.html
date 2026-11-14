@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d16">
+  <meta name="description" content="Complete the TrustLens registration form.">
+  <title>Registration — TrustLens</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="registration-page">
+  <button class="icon-button theme-toggle registration-theme-toggle" id="themeToggle" type="button" aria-label="Toggle light mode" aria-pressed="false" title="Toggle light mode"><span class="theme-icon" aria-hidden="true">☀</span></button>
+  <main class="registration-shell">
+    <a class="brand registration-brand" href="index.html" aria-label="TrustLens dashboard">
+      <span class="brand-mark">T</span>
+      <span class="brand-copy">TRUST<span>LENS</span><small>INTELLIGENCE PLATFORM</small></span>
+    </a>
+    <section class="registration-card" aria-labelledby="registrationTitle">
+      <div class="eyebrow">ACCOUNT SETUP / REGISTRATION</div>
+      <h1 id="registrationTitle">Create your account</h1>
+      <p class="registration-intro">Enter your details to complete the registration form.</p>
+      <form id="registrationForm" class="registration-form" novalidate>
+        <div class="registration-fields">
+          <div class="registration-field">
+            <label for="fullName">Full Name</label>
+            <input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="e.g. Alex Morgan" aria-describedby="fullNameError" required>
+            <span class="error-msg" id="fullNameError" aria-live="polite"></span>
+          </div>
+          <div class="registration-field">
+            <label for="empId">Employee / Register ID</label>
+            <input id="empId" name="empId" type="text" autocomplete="off" placeholder="6–12 letters or numbers" aria-describedby="empIdError" required>
+            <span class="error-msg" id="empIdError" aria-live="polite"></span>
+          </div>
+          <div class="registration-field">
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="text" inputmode="email" autocomplete="email" placeholder="you@example.com" aria-describedby="emailError" required>
+            <span class="error-msg" id="emailError" aria-live="polite"></span>
+          </div>
+          <div class="registration-field">
+            <label for="mobile">Mobile Number</label>
+            <input id="mobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number" aria-describedby="mobileError" required>
+            <span class="error-msg" id="mobileError" aria-live="polite"></span>
+          </div>
+          <div class="registration-field">
+            <label for="dept">Division</label>
+            <select id="dept" name="dept" aria-describedby="deptError" required>
+              <option value="">Select a division</option>
+              <option value="Engineering">Engineering</option>
+              <option value="Finance">Finance</option>
+              <option value="Human Resources">Human Resources</option>
+              <option value="Operations">Operations</option>
+              <option value="Sales">Sales</option>
+            </select>
+            <span class="error-msg" id="deptError" aria-live="polite"></span>
+          </div>
+          <div class="registration-field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="new-password" placeholder="Create a strong password" aria-describedby="passwordHint passwordError" required>
+            <small class="registration-hint" id="passwordHint">At least 8 characters with uppercase, lowercase, a number, and a symbol (@$!%*?&amp;).</small>
+            <span class="error-msg" id="passwordError" aria-live="polite"></span>
+          </div>
+          <div class="registration-field">
+            <label for="confirmPassword">Confirm Password</label>
+            <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" placeholder="Enter your password again" aria-describedby="confirmPasswordError" required>
+            <span class="error-msg" id="confirmPasswordError" aria-live="polite"></span>
+          </div>
+        </div>
+        <button class="primary-button registration-submit" id="registerButton" type="submit" disabled>Validate registration <span>→</span></button>
+        <p class="registration-status" id="registrationStatus" role="status" aria-live="polite"></p>
+      </form>
+      <p class="registration-privacy">This demo validates your entries in this browser only. No information is sent or saved.</p>
+      <p class="auth-account-links">Already have an account? <a href="signin.html">Sign in</a> · <a href="signup.html">Create an account</a></p>
+      <a class="registration-back" href="index.html">← Back to TrustLens</a>
+    </section>
+  </main>
+  <script src="registration.js"></script>
+  <script src="theme.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>

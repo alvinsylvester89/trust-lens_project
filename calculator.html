@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d16">
+  <meta name="description" content="A simple TrustLens calculator.">
+  <title>Calculator — TrustLens</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="calculator-page">
+  <main class="calculator-shell">
+    <header class="calculator-header">
+      <a class="brand" href="index.html" aria-label="TrustLens dashboard">
+        <span class="brand-mark">T</span>
+        <span class="brand-copy">TRUST<span>LENS</span><small>INTELLIGENCE PLATFORM</small></span>
+      </a>
+      <div class="calculator-header-actions">
+        <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="Toggle light mode" aria-pressed="false" title="Toggle light mode"><span class="theme-icon" aria-hidden="true">☀</span></button>
+        <a class="calculator-back" href="index.html">Back to dashboard</a>
+      </div>
+    </header>
+    <section class="calculator-card" aria-labelledby="calculatorTitle">
+      <div class="eyebrow">TOOLS / CALCULATOR</div>
+      <h1 id="calculatorTitle">Calculator</h1>
+      <p class="calculator-intro">Basic arithmetic with keyboard support.</p>
+      <output class="calculator-display" id="calculatorDisplay" aria-label="Calculator display" aria-live="polite" tabindex="0">0</output>
+      <div class="calculator-keys" id="calculatorKeys" aria-label="Calculator keys">
+        <button class="calculator-key" type="button" data-key="7">7</button>
+        <button class="calculator-key" type="button" data-key="8">8</button>
+        <button class="calculator-key" type="button" data-key="9">9</button>
+        <button class="calculator-key operator" type="button" data-key="/">/</button>
+        <button class="calculator-key" type="button" data-key="4">4</button>
+        <button class="calculator-key" type="button" data-key="5">5</button>
+        <button class="calculator-key" type="button" data-key="6">6</button>
+        <button class="calculator-key operator" type="button" data-key="*">*</button>
+        <button class="calculator-key" type="button" data-key="1">1</button>
+        <button class="calculator-key" type="button" data-key="2">2</button>
+        <button class="calculator-key" type="button" data-key="3">3</button>
+        <button class="calculator-key operator" type="button" data-key="-">-</button>
+        <button class="calculator-key clear-key" type="button" data-key="clear">C</button>
+        <button class="calculator-key" type="button" data-key="0">0</button>
+        <button class="calculator-key" type="button" data-key=".">.</button>
+        <button class="calculator-key operator" type="button" data-key="+">+</button>
+        <button class="calculator-key equals-key" type="button" data-key="equals">=</button>
+      </div>
+      <p class="calculator-hint">Use Enter or = to calculate, Backspace to delete, and Escape to clear.</p>
+    </section>
+  </main>
+  <script src="calculator.js"></script>
+  <script src="theme.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>

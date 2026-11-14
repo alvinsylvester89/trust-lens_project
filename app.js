@@ -279,7 +279,18 @@
   });
   document.addEventListener("change", event => {
     if (event.target === filePicker) analyzeFiles(filePicker.files);
-    if (event.target.id === "themeSelect") { state.theme = event.target.value; document.documentElement.dataset.theme = state.theme; persist(); toast(`${state.theme === "dark" ? "Dark" : "Light"} theme enabled.`); }
+    if (event.target.id === "themeSelect") {
+      window.dispatchEvent(new CustomEvent("trustlens:themechange", { detail: { theme: event.target.value } }));
+      toast(`${event.target.value === "dark" ? "Dark" : "Light"} theme enabled.`);
+    }
+  });
+  window.addEventListener("trustlens:themechange", event => {
+    const theme = event.detail && event.detail.theme;
+    if (theme !== "dark" && theme !== "light") return;
+    state.theme = theme;
+    const selector = document.getElementById("themeSelect");
+    if (selector) selector.value = theme;
+    persist();
   });
   document.addEventListener("keydown", event => {
     if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") { event.preventDefault(); document.getElementById("globalSearch").focus(); }

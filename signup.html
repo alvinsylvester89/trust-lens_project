@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d16">
+  <meta name="description" content="Sign up for a TrustLens demo account.">
+  <title>Sign Up — TrustLens</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="registration-page">
+  <button class="icon-button theme-toggle registration-theme-toggle" id="themeToggle" type="button" aria-label="Toggle light mode" aria-pressed="false" title="Toggle light mode"><span class="theme-icon" aria-hidden="true">☀</span></button>
+  <main class="registration-shell auth-shell">
+    <a class="brand registration-brand" href="index.html" aria-label="TrustLens dashboard">
+      <span class="brand-mark">T</span>
+      <span class="brand-copy">TRUST<span>LENS</span><small>INTELLIGENCE PLATFORM</small></span>
+    </a>
+    <section class="registration-card" aria-labelledby="signupTitle">
+      <div class="eyebrow">ACCOUNT SETUP / SIGN UP</div>
+      <h1 id="signupTitle">Create your account</h1>
+      <p class="registration-intro">Set up your demo account with an email and password.</p>
+      <form id="signupForm" class="auth-form">
+        <div class="registration-field">
+          <label for="signupEmail">Email address</label>
+          <input id="signupEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        </div>
+        <div class="registration-field">
+          <label for="signupPassword">Password</label>
+          <input id="signupPassword" name="password" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required>
+          <small class="registration-hint">Use at least 8 characters.</small>
+        </div>
+        <label class="auth-consent" for="termsConsent">
+          <input id="termsConsent" name="termsConsent" type="checkbox" required>
+          <span>I agree to the Terms of Service.</span>
+        </label>
+        <button class="primary-button registration-submit" type="submit">Create account <span>→</span></button>
+        <p class="registration-status" id="signupStatus" role="status" aria-live="polite"></p>
+      </form>
+      <p class="registration-privacy">This demo does not create an account or send or store your credentials.</p>
+      <p class="auth-account-links">Already have an account? <a href="signin.html">Sign in</a></p>
+      <a class="registration-back" href="index.html">← Back to TrustLens</a>
+    </section>
+  </main>
+  <script src="auth-pages.js"></script>
+  <script src="theme.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>
